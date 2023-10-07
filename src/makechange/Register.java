@@ -17,8 +17,7 @@ public class Register {
 		// Denominations that are not used will not be displayed.
 
 		// declare variables and scanner.
-		// note: I used float in place of double because I wanted practice with using
-		// different data types and casting
+
 		Scanner sc = new Scanner(System.in);
 		float changeAmt;
 		int numberUsed;
@@ -45,9 +44,10 @@ public class Register {
 			// 4) If the amount tendered is more than the cost of the item,
 			// display the number of bills and coins that should be given to
 			// the customer. Denominations that are not used will not be displayed.
-			changeAmt = (float) (moneyUsed - objectPrice + 0.00001); // due to data loss from float/doubles, a
-																		// correction of 0.00001********************************************************************************************
-			System.out.printf("the change you are owed is: $%.2f.%n", changeAmt); // calculate and show how much is owed to the second decimal point
+			changeAmt = (float) (moneyUsed - objectPrice + 0.00001); // due to data loss from float/doubles,
+																		// a correction of 0.00001 is added
+			System.out.printf("the change you are owed is: $%.2f.%n", changeAmt); // calculate and show how much is owed
+																					// to the second decimal point
 
 			float denomination;
 			System.out.print("You are owed: ");
@@ -70,24 +70,26 @@ public class Register {
 					// outputs the value number of each denomination used ex: 1 ten dollar bill
 					System.out.print(numberUsed + " ");
 					System.out.print(billType(i));
-					if (numberUsed > 1 || i == 7) {
 
-						if (numberUsed > 1 && i == 7) {
-							System.out.print("ies"); // if else statement for penny vs pennies
-						} else if (i == 7) {
-							System.out.print("y");
-						} else {
-							System.out.print("s"); // adds an 's' if more than one bill/coin is used
-						}
+					if (numberUsed > 1 && i == 7) {
+						System.out.print("ies"); // if else statement for penny vs pennies
+					} else if (i == 7) {
+						System.out.print("y");
+					} else if (numberUsed > 1) {
+						System.out.print("s"); // adds an 's' if more than one bill/coin is used }
 					}
-					if (changeAmt > .005) {
+
+					if (changeAmt > .01) {
 						System.out.print(", "); // prints a comma and space to separate the
 					} // denominations except when no change remains
+
 				}
 			}
-			System.out.println(". \nThank you, come again!");
+				System.out.println(". \nThank you, come again!");
+			
 		}
 		sc.close();
+
 	}
 
 	// method used to determine what denomination is used to calculate,

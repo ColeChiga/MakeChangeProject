@@ -23,11 +23,11 @@ Then the program prints the numberUsed and a string from a method billType(i), w
 
 An if statement is ran to see if the numberUsed > 1 or if i == 7, which checks if their is more than one penny used, printing "ies" to go on the end of "penn". this is for multiple pennies.
 If only i == 7 (ie num used == 1) than it only prints "y" to add on to "penn". tis is for a singular penny.
-If number Used > 1 (but it is not on  i == 7) than it simply prints "s", to make the  number of bills/coins plural
+If number Used > 1 (but it is not on  i == 7) than it simply prints "s", to make the  number of bills/coins plural.
 
 The for loop then moves on to a sigular if statement that checks if the changeAmt > 0.01, if it is a comma is inserted into the output. 
 
-The program than loops back around. This gives the for loop the output of "numberUsed billType (s), ". So if you are owed a $10.51, it will print:
+The program than loops back around. This gives the for loop the output of "numberUsed billType(s), ". So if you are owed $10.51, it will print:
  "You are owed: 1 ten dollar bill, 2 quarters, and 1 penny"
 
  Once the loop is exited, the program prints an exit message, exits the initial if statements, and closes the scanner

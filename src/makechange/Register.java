@@ -44,11 +44,14 @@ public class Register {
 			// 4) If the amount tendered is more than the cost of the item,
 			// display the number of bills and coins that should be given to
 			// the customer. Denominations that are not used will not be displayed.
-			changeAmt = (float) (moneyUsed - objectPrice + 0.00001); // due to data loss from float/doubles,
-																		// a correction of 0.00001 is added
-			System.out.printf("the change you are owed is: $%.2f.%n", changeAmt); // calculate and show how much is owed
-																					// to the second decimal point
-
+			
+			
+			// due to data loss from float/doubles, a correction of 0.00001 is added
+			changeAmt = (float) (moneyUsed - objectPrice + 0.00001);
+			
+			// show how much is owed to the second decimal point
+			System.out.printf("the change you are owed is: $%.2f.%n", changeAmt); 
+			
 			float denomination;
 			System.out.print("You are owed: ");
 
